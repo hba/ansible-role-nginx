@@ -35,6 +35,7 @@
 
 # Nginx setup.
 - name: Copy nginx configuration in place.
+  become: true
   template:
     src: "{{ nginx_conf_template }}"
     dest: "{{ nginx_conf_file_path }}"
