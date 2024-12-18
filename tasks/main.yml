@@ -46,6 +46,7 @@
     - reload nginx
 
 - name: Ensure nginx service is running as configured.
+  become: true
   service:
     name: nginx
     state: "{{ nginx_service_state }}"
